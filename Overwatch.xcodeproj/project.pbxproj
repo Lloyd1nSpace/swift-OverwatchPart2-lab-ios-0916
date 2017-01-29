@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ED247031E3E548100DF9E37 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED247021E3E548100DF9E37 /* SelectionViewController.swift */; };
+		6ED247051E3E59C600DF9E37 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED247041E3E59C600DF9E37 /* Hero.swift */; };
+		6ED247071E3E59D600DF9E37 /* HeroAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED247061E3E59D600DF9E37 /* HeroAttributes.swift */; };
+		6ED247091E3E59E300DF9E37 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED247081E3E59E300DF9E37 /* Game.swift */; };
+		6ED2470B1E3E59EE00DF9E37 /* OverwatchHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2470A1E3E59EE00DF9E37 /* OverwatchHero.swift */; };
 		7D69AE6B1DAAF58B006B180A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D69AE6A1DAAF58B006B180A /* AppDelegate.swift */; };
 		7D69AE701DAAF58B006B180A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D69AE6E1DAAF58B006B180A /* Main.storyboard */; };
 		7D69AE721DAAF58B006B180A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D69AE711DAAF58B006B180A /* Assets.xcassets */; };
@@ -30,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6ED247021E3E548100DF9E37 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		6ED247041E3E59C600DF9E37 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		6ED247061E3E59D600DF9E37 /* HeroAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAttributes.swift; sourceTree = "<group>"; };
+		6ED247081E3E59E300DF9E37 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		6ED2470A1E3E59EE00DF9E37 /* OverwatchHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverwatchHero.swift; sourceTree = "<group>"; };
 		7D69AE671DAAF58B006B180A /* Overwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Overwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D69AE6A1DAAF58B006B180A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D69AE6F1DAAF58B006B180A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +96,11 @@
 			isa = PBXGroup;
 			children = (
 				7D69AE6A1DAAF58B006B180A /* AppDelegate.swift */,
+				6ED247021E3E548100DF9E37 /* SelectionViewController.swift */,
+				6ED247041E3E59C600DF9E37 /* Hero.swift */,
+				6ED247061E3E59D600DF9E37 /* HeroAttributes.swift */,
+				6ED247081E3E59E300DF9E37 /* Game.swift */,
+				6ED2470A1E3E59EE00DF9E37 /* OverwatchHero.swift */,
 				7D69AE6E1DAAF58B006B180A /* Main.storyboard */,
 				7D69AE711DAAF58B006B180A /* Assets.xcassets */,
 				7D69AE731DAAF58B006B180A /* LaunchScreen.storyboard */,
@@ -161,7 +176,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Gamesmith, LLC";
 				TargetAttributes = {
 					7D69AE661DAAF58B006B180A = {
@@ -221,7 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED247071E3E59D600DF9E37 /* HeroAttributes.swift in Sources */,
+				6ED247091E3E59E300DF9E37 /* Game.swift in Sources */,
 				7D69AE6B1DAAF58B006B180A /* AppDelegate.swift in Sources */,
+				6ED2470B1E3E59EE00DF9E37 /* OverwatchHero.swift in Sources */,
+				6ED247031E3E548100DF9E37 /* SelectionViewController.swift in Sources */,
+				6ED247051E3E59C600DF9E37 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +306,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -335,6 +356,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
