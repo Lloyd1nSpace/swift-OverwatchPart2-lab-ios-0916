@@ -15,6 +15,7 @@ class SelectionViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var heroScrollView: UIScrollView!
+    var characterImageView: UIImageView!
     
     var game: Game = Game()
     var heroType: HeroType! {
@@ -46,8 +47,80 @@ class SelectionViewController: UIViewController {
     }
     
     func updateStackViewWithHeroes() {
+        // Offense & Defense have 6 characters
+        // Tank & Support have 5 characters
+        // For each heroType I need to: adjust the widthConstraint of the stack view, addArrangedSubviews of UIImageViews corressponding with heroType as well as removeArrangedSubviews of previous heroes
+        // Using the scrollViewDelegate, I need to also update the labels to correspond with the UIImageViews
+    
         
+        
+            if heroType == .offense {
+                  for offenseHero in game.offenseCharacters {
+                
+//                    characterImageView.removeFromSuperview()
+                    heroNameLabel.text = offenseHero.name.description
+                    characterImageView = UIImageView(image: offenseHero.produceProfileImage())
+                    characterStackView.addArrangedSubview(characterImageView)
+                    characterStackViewWidthConstraint.constant *= 6
+                }
+            } else if heroType == .defense {
+                for defenseHero in game.defenseCharacters {
+                    characterImageView.removeFromSuperview()
+                    characterImageView = UIImageView(image: defenseHero.produceProfileImage())
+                    characterStackView.addArrangedSubview(characterImageView)
+                    characterStackViewWidthConstraint.constant *= 6
+                }
+            } else if heroType == .tank {
+                for tankHero in game.tankCharacters {
+                    characterImageView.removeFromSuperview()
+                    characterImageView = UIImageView(image: tankHero.produceProfileImage())
+                    characterStackView.addArrangedSubview(characterImageView)
+                    characterStackViewWidthConstraint.constant *= 4
+                }
+            } else if heroType == .support {
+                for supportHero in game.supportCharacters {
+                    characterImageView.removeFromSuperview()
+                    characterImageView = UIImageView(image: supportHero.produceProfileImage())
+                    characterStackView.addArrangedSubview(characterImageView)
+                    characterStackViewWidthConstraint.constant *= 4
+                }
+        }
+        
+        imageViewConstraints()
+
     }
+    
+    
+    func imageViewConstraints() {
+        characterImageView.translatesAutoresizingMaskIntoConstraints = false
+        characterImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
+        characterImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+        characterImageView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        characterImageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+    }
+    
 }
 
-extension SelectionViewController: UIScrollViewDelegate { }
+extension SelectionViewController: UIScrollViewDelegate {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+    }
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+    }
+    
+}

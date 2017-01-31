@@ -23,13 +23,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17w-GC-ZrB">
-                                <rect key="frame" x="16" y="64" width="343" height="40"/>
+                                <rect key="frame" x="16" y="64" width="343" height="39.5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRN-uf-adY">
+                                <rect key="frame" x="16" y="184" width="343" height="372.5"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-M5-49z">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="321"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWT-jt-FAT">
+                                                <rect key="frame" x="0.0" y="-43" width="343" height="367"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jWT-jt-FAT" firstAttribute="leading" secondItem="6V2-M5-49z" secondAttribute="leading" id="71K-uG-cc0"/>
+                                            <constraint firstItem="jWT-jt-FAT" firstAttribute="centerY" secondItem="6V2-M5-49z" secondAttribute="centerY" constant="-20" id="8Zg-yx-uB9"/>
+                                            <constraint firstAttribute="bottom" secondItem="jWT-jt-FAT" secondAttribute="bottom" constant="-3" id="GkJ-s4-a75"/>
+                                            <constraint firstAttribute="trailing" secondItem="jWT-jt-FAT" secondAttribute="trailing" id="l3E-ck-obQ"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jWT-jt-FAT" firstAttribute="width" secondItem="vRN-uf-adY" secondAttribute="width" id="6ZX-f2-NkB"/>
+                                    <constraint firstItem="6V2-M5-49z" firstAttribute="top" secondItem="vRN-uf-adY" secondAttribute="top" id="6pQ-cz-JnD"/>
+                                    <constraint firstAttribute="trailing" secondItem="6V2-M5-49z" secondAttribute="trailing" id="BcB-vx-Cmx"/>
+                                    <constraint firstItem="jWT-jt-FAT" firstAttribute="height" secondItem="vRN-uf-adY" secondAttribute="height" constant="-5.5" id="dwV-OD-hkh"/>
+                                    <constraint firstItem="6V2-M5-49z" firstAttribute="bottom" secondItem="vRN-uf-adY" secondAttribute="bottomMargin" constant="-43.5" id="sCH-Uq-15z"/>
+                                    <constraint firstItem="6V2-M5-49z" firstAttribute="leading" secondItem="vRN-uf-adY" secondAttribute="leading" id="zd1-AW-4Io"/>
+                                </constraints>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pjp-GG-Dtj">
-                                <rect key="frame" x="16" y="631" width="343" height="29"/>
+                                <rect key="frame" x="16" y="595" width="343" height="29"/>
                                 <segments>
                                     <segment title="Offense"/>
                                     <segment title="Defense"/>
@@ -40,47 +69,19 @@
                                     <action selector="changeInHeroType:" destination="Z5s-jC-RXv" eventType="valueChanged" id="P8D-24-XdQ"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRN-uf-adY">
-                                <rect key="frame" x="16" y="294" width="343" height="329"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-M5-49z">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="321"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWT-jt-FAT">
-                                                <rect key="frame" x="66" y="-4.5" width="343" height="329"/>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="jWT-jt-FAT" firstAttribute="leading" secondItem="6V2-M5-49z" secondAttribute="leading" constant="66" id="71K-uG-cc0"/>
-                                            <constraint firstItem="jWT-jt-FAT" firstAttribute="centerY" secondItem="6V2-M5-49z" secondAttribute="centerY" id="8Zg-yx-uB9"/>
-                                            <constraint firstAttribute="bottom" secondItem="jWT-jt-FAT" secondAttribute="bottom" constant="106" id="GkJ-s4-a75"/>
-                                            <constraint firstAttribute="trailing" secondItem="jWT-jt-FAT" secondAttribute="trailing" constant="77" id="l3E-ck-obQ"/>
-                                        </constraints>
-                                    </scrollView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="jWT-jt-FAT" firstAttribute="width" secondItem="vRN-uf-adY" secondAttribute="width" id="6ZX-f2-NkB"/>
-                                    <constraint firstItem="6V2-M5-49z" firstAttribute="top" secondItem="vRN-uf-adY" secondAttribute="top" id="6pQ-cz-JnD"/>
-                                    <constraint firstAttribute="trailing" secondItem="6V2-M5-49z" secondAttribute="trailing" id="BcB-vx-Cmx"/>
-                                    <constraint firstItem="jWT-jt-FAT" firstAttribute="height" secondItem="vRN-uf-adY" secondAttribute="height" id="dwV-OD-hkh"/>
-                                    <constraint firstItem="6V2-M5-49z" firstAttribute="bottom" secondItem="vRN-uf-adY" secondAttribute="bottomMargin" id="sCH-Uq-15z"/>
-                                    <constraint firstItem="6V2-M5-49z" firstAttribute="leading" secondItem="vRN-uf-adY" secondAttribute="leading" id="zd1-AW-4Io"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="17w-GC-ZrB" firstAttribute="top" secondItem="q7H-E2-SZz" secondAttribute="bottom" constant="44" id="58R-Aj-uST"/>
-                            <constraint firstItem="vRN-uf-adY" firstAttribute="top" secondItem="17w-GC-ZrB" secondAttribute="bottom" constant="190.5" id="DxE-1Q-m6z"/>
+                            <constraint firstItem="vRN-uf-adY" firstAttribute="top" secondItem="17w-GC-ZrB" secondAttribute="bottom" constant="80.5" id="DxE-1Q-m6z"/>
                             <constraint firstItem="vRN-uf-adY" firstAttribute="leading" secondItem="Clx-Al-gNK" secondAttribute="leadingMargin" id="KzS-zK-TXk"/>
                             <constraint firstItem="Pjp-GG-Dtj" firstAttribute="trailing" secondItem="Clx-Al-gNK" secondAttribute="trailingMargin" id="NzT-7P-rHL"/>
-                            <constraint firstItem="liE-Fp-SbQ" firstAttribute="top" secondItem="Pjp-GG-Dtj" secondAttribute="bottom" constant="8" id="PCr-ys-9He"/>
+                            <constraint firstItem="liE-Fp-SbQ" firstAttribute="top" secondItem="Pjp-GG-Dtj" secondAttribute="bottom" constant="44" id="PCr-ys-9He"/>
                             <constraint firstItem="Pjp-GG-Dtj" firstAttribute="leading" secondItem="Clx-Al-gNK" secondAttribute="leadingMargin" id="TNn-Vw-dfA"/>
                             <constraint firstItem="vRN-uf-adY" firstAttribute="trailing" secondItem="Clx-Al-gNK" secondAttribute="trailingMargin" id="Uau-8j-8YU"/>
                             <constraint firstItem="17w-GC-ZrB" firstAttribute="leading" secondItem="Clx-Al-gNK" secondAttribute="leadingMargin" id="c4P-QP-Ayl"/>
                             <constraint firstItem="17w-GC-ZrB" firstAttribute="trailing" secondItem="Clx-Al-gNK" secondAttribute="trailingMargin" id="gkA-mL-sZ4"/>
-                            <constraint firstItem="Pjp-GG-Dtj" firstAttribute="top" secondItem="vRN-uf-adY" secondAttribute="bottom" constant="8" id="s54-9H-9A6"/>
+                            <constraint firstItem="Pjp-GG-Dtj" firstAttribute="top" secondItem="vRN-uf-adY" secondAttribute="bottom" constant="38.5" id="s54-9H-9A6"/>
                         </constraints>
                     </view>
                     <connections>
